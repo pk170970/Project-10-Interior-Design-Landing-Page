@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    background: url("../Photos/retro-living-room-interior-design_53876-145503.webp") no-repeat;
+    background-position: cover;
+    height: 100vh;
+    background-size: 100% 100%;
+}
+
+/* --------------------------------Navigation Section------------------------- */
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 15vh;
+}
+
+.logo {
+    margin-left: 92px;
+    margin-top: 45px;
+}
+
+.logo img {
+    width: 10vw;
+    height: 7vh;
+}
+
+.list-container {
+    display: flex;
+}
+
+.list ul {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-top: 36px;
+}
+
+.list-item {
+    color: #ffff;
+    list-style: none;
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.list-item:hover{
+    cursor: pointer;
+    color: black;
+}
+.contact {
+    width: 400px;
+    height: 109px;
+    margin-left: 20px;
+}
+
+.contact img {
+    filter: invert();
+    position: absolute; 
+    height: 100px;
+    right: 307px;
+}
+.contact-content{
+    margin-top: 24px;
+    margin-left: 90px;
+    color: #ffff;
+    
+}
+
+hr{
+    background-color: #ffff;
+    width: 57vw;
+    height: 0.4vh;
+    position: absolute;
+    top: 112px;
+    right: 145px;
+}
+
+/* -------------------------------------Hero Section---------------------------- */
+
+.hero{
+    width: 100vw;
+    height: 85vh;
+}
+.hero::after{
+    content: "";
+    background-color: rgb(255 255 255);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    right: 388px;
+    bottom: 198px;
+}
+.hero::before{
+    content: "";
+    background-color: rgb(255 255 255);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    right: 163px;
+    bottom: 296px;
+}
+.content{
+    width: 50vw;
+    height: 65vh;
+    position: absolute;
+    color: #ffff;
+}
+
+.content h1{
+    font-weight: bolder;
+    font-size: 62px;
+    padding-top: 120px;
+    padding-left: 221px;
+}
+.btn{
+    border-radius: 30px;
+    padding: 18px 40px;
+    font-size: 22px;
+    border: none;
+    color: #ffffff;
+    background-color: transparent;
+    margin-top: 55px;
+    margin-left: 217px;
+    border: 3px solid #ffff;
+    font-weight: bold;
+}
+
+.btn:hover{
+    color: black;
+    background-color:  white;
+}
+
+
+.card:first-child{
+    background-color:rgb(174 193 208 / 30%);
+    width: 21vw;
+    height: 26vh;
+    z-index: 2;
+    margin-top: 50px;
+    position: absolute;
+    right: 466px;
+    bottom: 90px;
+}
+.card:last-child{
+    background-color: rgb(174 193 208 / 30%);
+    width: 21vw;
+    height: 26vh;
+    z-index: 2;
+    margin-top: 50px;
+    position: absolute;
+    right: 86px;
+    top: 109px;
+}
+
+.card::after{
+    content: "";
+    background-color: rgb(255 255 255);
+    width: 60px;
+    height: 2px;
+    
+}
+.card:first-child:after{
+    position: absolute;
+    left: 323px;
+    bottom: 117px;
+}
+.card:last-child:after{
+    position: absolute;
+    content: "";
+    background-color: rgb(255 255 255);
+    width: 60px;
+    height: 2px;
+    position: absolute;
+    left: 205px;
+    bottom: -31px;
+    transform: rotate(90deg);
+}
+
+.bulb-image{
+    position: absolute;
+    left: -96px;
+}
+.puzzle-image{
+    position: absolute;
+    left: 34px;
+}
+.card p{
+    color: #ffffff;
+    margin-top: 104px;
+    font-size: 18px;
+    margin-left: 43px;
+}
