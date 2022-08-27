@@ -304,6 +304,10 @@ hr{
 
 
 @media (max-width:1200px){
+
+    .container{
+        height: unset;
+    }
     .content h1{
         font-weight: bold;
         font-size: 2.5rem;
@@ -318,6 +322,9 @@ hr{
 
 @media (max-width:1000px){
 
+    .container{
+        height: unset;
+    }
      .cards-container{
         all: unset;
     }
