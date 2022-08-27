@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+ /* ---------All borders commented out is used for debugging------------------ */
+
+ 
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +10,9 @@
     
 }
 
+html{
+    font-size: 16px;
+}
 body{
     font-family: 'Poppins', sans-serif;
 }
@@ -14,6 +21,7 @@ body{
     background-position: cover;
     height: 100vh;
     background-size: 100% 100%;
+    
 }
 
 /* --------------------------------Navigation Section------------------------- */
@@ -22,37 +30,60 @@ body{
 nav {
     display: flex;
     justify-content: space-between;
-    height: 15vh;
-}
-
-.logo {
-    margin-left: 92px;
-    margin-top: 45px;
+    align-items: center;
+    /* border: 3px solid red; */
+    padding: 2em 2em 3em 2em;
 }
 
 .logo img {
-    width: 10vw;
-    height: 7vh;
+    width: 80%;
 }
 
 .list-container {
-    display: flex;
+   display: flex;
+   flex-direction: column;
+     width: 85%;
+     /* border: 2px solid red; */
+     align-items: center;
+    
 }
+
+.list-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5em;
+    /* border: 2px solid greenyellow; */
+    padding-bottom: 1em;
+}
+
+hr{
+    height: 3px;
+    background-color: white;
+    min-width:750px;
+}
+/* .list-container::after{
+    content: "";
+    width: 50%;
+    border-bottom: 3px solid  white;
+    position: absolute;
+    top: 10%;
+
+
+} */
 
 .list ul {
     display: flex;
     justify-content: space-between;
-    margin-left: 20px;
-    margin-top: 36px;
+    /* border: 2px solid orange; */
+    gap: 2em;
 }
 
 .list-item {
     color: #ffff;
     list-style: none;
-    margin-left: 50px;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: bold;
-    z-index: 2;
 }
 
 .list-item:hover{
@@ -60,40 +91,64 @@ nav {
     color: black;
 }
 .contact {
-    width: 400px;
-    height: 109px;
-    margin-left: 20px;
+    /* border: 3px solid yellow; */
+    display: flex;
+    gap: 1em;
+    
 }
 
 .contact img {
     filter: invert();
-    position: absolute; 
-    height: 100px;
-    right: 307px;
+    /* border: 2px solid red; */
 }
 .contact-content{
-    margin-top: 24px;
-    margin-left: 90px;
     color: #ffff;
     
 }
 
-hr{
-    background-color: #ffff;
-    width: 57vw;
-    height: 0.4vh;
-    position: absolute;
-    top: 112px;
-    right: 145px;
+@media (max-width:1000px) {
+    html{
+        font-size: 14px;
+    }
+    .contact{
+        display: none;
+    }
+    .list-container{
+        align-items: flex-end;
+    }
+    hr{
+        min-width: 450px;
+    }
+}
+
+@media (max-width:700px) {
+    .list ul{
+        display: none;
+    }
+    .contact{
+        display: flex;
+    }
+    hr{
+        min-width: 180px;
+    }
+}
+@media (max-width:450px) {
+    .list-container{
+        display: none;
+    }
 }
 
 /* -------------------------------------Hero Section---------------------------- */
 
 .hero{
-    width: 100vw;
-    height: 85vh;
+    display: block;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    /* border: 3px solid pink; */
+    justify-content: center;
 }
-.hero::after{
+/* .hero::after{
     content: "";
     background-color: rgb(255 255 255);
     width: 20px;
@@ -112,31 +167,33 @@ hr{
     position: absolute;
     right: 163px;
     bottom: 296px;
-}
+} */
 .content{
-    width: 50vw;
-    height: 65vh;
-    position: absolute;
+    width: 50%;
     color: #ffff;
+    /* border: 2px solid yellow; */
+    display:flex;
+    flex-direction: column;
+    gap: 4em;
+    justify-content: center;
+    padding: 4em;
+    
 }
 
 .content h1{
     font-weight: bolder;
-    font-size: 62px;
-    padding-top: 120px;
-    padding-left: 221px;
+    font-size: 3rem;
 }
 .btn{
     border-radius: 30px;
-    padding: 18px 40px;
-    font-size: 22px;
+    font-size: 1.5rem;
     border: none;
     color: #ffffff;
     background-color: transparent;
-    margin-top: 55px;
-    margin-left: 217px;
     border: 3px solid #ffff;
     font-weight: bold;
+    width: 45%;
+    padding: 0.8em 0em;
 }
 
 .btn:hover{
@@ -145,62 +202,197 @@ hr{
 }
 
 
-.card:first-child{
-    background-color:rgb(174 193 208 / 30%);
-    width: 21vw;
-    height: 26vh;
-    z-index: 2;
-    margin-top: 50px;
-    position: absolute;
-    right: 466px;
-    bottom: 90px;
+.cards-container{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
 }
-.card:last-child{
+
+.cards1{
+    display: flex;
+    /* border: 2px solid red; */
+    flex-direction: row;
+    width: 50%;
+    height: 50%;
+    justify-content: flex-start;
+    align-self: flex-end;
+}
+
+/* .cards2{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid green;
+} */
+
+.card1{
+    display: flex;
+    flex-direction: column;
     background-color: rgb(174 193 208 / 30%);
-    width: 21vw;
-    height: 26vh;
-    z-index: 2;
-    margin-top: 50px;
-    position: absolute;
-    right: 86px;
-    top: 109px;
+    width: 70%;
+    padding: 1em;
 }
 
-.card::after{
-    content: "";
-    background-color: rgb(255 255 255);
-    width: 60px;
-    height: 2px;
-    
-}
-.card:first-child:after{
-    position: absolute;
-    left: 323px;
-    bottom: 117px;
-}
-.card:last-child:after{
-    position: absolute;
-    content: "";
-    background-color: rgb(255 255 255);
-    width: 60px;
-    height: 2px;
-    position: absolute;
-    left: 205px;
-    bottom: -31px;
-    transform: rotate(90deg);
-}
-
-.bulb-image{
-    position: absolute;
-    left: -96px;
-}
-.puzzle-image{
-    position: absolute;
-    left: 34px;
-}
 .card p{
-    color: #ffffff;
-    margin-top: 104px;
-    font-size: 18px;
-    margin-left: 43px;
+    color: white;
+    padding-left: 1em;
+}
+
+.design1{
+    display: flex;
+    flex-direction: row-reverse;
+    /* border: 2px solid violet; */
+    width: 30%;
+    align-items: center;
+    justify-content:flex-end;
+}
+
+.circle1{
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background: white;
+}
+
+.line1{
+    background: white;
+    height: 2px;
+    width: 50%;
+}
+
+
+
+.cards2{
+    display: flex;
+    /* border: 2px solid orange; */
+    flex-direction: column;
+    align-self: flex-end;
+    justify-self: flex-start;
+    height: 100%;
+}
+
+.card2{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(174 193 208 / 30%);
+    padding: 1em;
+    margin-right: 4em;
+}
+
+.design2{
+    display: flex;
+    flex-direction: column-reverse;
+    /* border: 2px solid violet; */
+    height: 15vh;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.circle2{
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background: white;
+}
+
+.line2{
+    background: white;
+    height: 80%;
+    width: 2px;
+}
+
+
+@media (max-width:1200px){
+    .content h1{
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+
+    .btn{
+        font-size: 1rem;
+        width: 50%;
+        padding: 0.8em 0em;
+    }
+}
+
+@media (max-width:1000px){
+
+     .cards-container{
+        all: unset;
+    }
+    .cards{
+        all: unset;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .card{
+        all: unset;
+        background-color: rgb(174 193 208 / 30%);
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+        margin: 1em;
+    }
+    .card img{
+        width: 60%;
+    }
+    .card p{
+        width: 100%;
+    }
+    .design1, .design2{
+        display: none;
+    }
+
+    .content{
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+
+    .btn{
+        font-size: 0.9rem;
+        width: 50%;
+        padding: 1em 0em;
+    }
+}
+
+
+@media (max-width:600px){
+
+    .container{
+        /* all: unset; */
+        height: unset;
+    }
+    .hero{
+        all: unset;
+        display: flex;
+        flex-direction: column;
+    }
+    .content{
+        width: 100%;
+    }
+    .cards-container{
+        all: unset;
+    }
+    .cards{
+        all: unset;
+    }
+    .card{
+        all: unset;
+        background-color: rgb(174 193 208 / 30%);
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+        margin: 1em;
+    }
+    .cards img{
+        width: 60%;
+    }
+    .cards p{
+        font-size: 1rem;
+    }
 }
